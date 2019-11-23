@@ -12,6 +12,7 @@
 		262542962389ACC00041F3D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262542952389ACC00041F3D9 /* Assets.xcassets */; };
 		262542992389ACC00041F3D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262542982389ACC00041F3D9 /* Preview Assets.xcassets */; };
 		2625429C2389ACC00041F3D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2625429A2389ACC00041F3D9 /* Main.storyboard */; };
+		262542A52389E02B0041F3D9 /* PickerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262542A42389E02B0041F3D9 /* PickerSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2625429B2389ACC00041F3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2625429D2389ACC00041F3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2625429E2389ACC00041F3D9 /* ColorMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ColorMenu.entitlements; sourceTree = "<group>"; };
+		262542A42389E02B0041F3D9 /* PickerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2625429D2389ACC00041F3D9 /* Info.plist */,
 				2625429E2389ACC00041F3D9 /* ColorMenu.entitlements */,
 				262542972389ACC00041F3D9 /* Preview Content */,
+				262542A42389E02B0041F3D9 /* PickerSettings.swift */,
 			);
 			path = ColorMenu;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262542A52389E02B0041F3D9 /* PickerSettings.swift in Sources */,
 				262542942389ACBC0041F3D9 /* ContentView.swift in Sources */,
 				262542922389ACBC0041F3D9 /* AppDelegate.swift in Sources */,
 			);
