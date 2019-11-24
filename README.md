@@ -7,7 +7,7 @@
 
 ## Features
 * 🖌 Pixel perfect color sampling
-* 🎨 color spaces
+* 🎨 5 color spaces
 * 🖼 Preview of surrounding pixels
 
 ![Color Space settings](Resources/options.png)
