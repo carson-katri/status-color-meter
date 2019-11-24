@@ -1,6 +1,6 @@
 Copyright (c) 2019 Carson Katri
 
-Permission is hereby granted to any person obtaining the source code to use and modify it. Permission is not granted to sell, license, of distribution compiled copies of the code, or to sell/license the source code itself. Any derivatives works of the source code must be provided as free and open source.
+Permission is hereby granted to any person obtaining the source code to use and modify it. Permission is not granted to sell, license, or distribute compiled copies of the code, or to sell/license the source code itself. Any derivatives works of the source code must be provided as free and open source.
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
