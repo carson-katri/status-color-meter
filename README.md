@@ -4,12 +4,12 @@
 <p align="center">DigitalColorMeter for the status bar</p>
 <p align="center"><img src="Resources/demo.gif" /></p>
 
-![Color Space settings](Resources/options.png)
-
 ## Features
 * 🎨 Pixel perfect color sampling
 * ❺ color spaces
 * 🖼 Preview of surrounding pixels
+
+![Color Space settings](Resources/options.png)
 
 ## Technologies
 This app was built using `SwiftUI`, Apple's new UI framework for macOS, iOS, watchOS, and tvOS.
