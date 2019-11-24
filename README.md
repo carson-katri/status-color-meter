@@ -1,7 +1,7 @@
 ![Status Color Meter banner](Resources/banner.png)
 
 <h1 align="center">Status Color Meter</h1>
-<p align="center">DigitalColorMeter for the status bar</p>
+<p align="center">DigitalColorMeter for the menu bar</p>
 <p align="center"><img src="Resources/demo.gif" /></p>
 <p align="center"><a href="https://apps.apple.com/app/id1489065505"><img src="Resources/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg" /></a></p>
 
