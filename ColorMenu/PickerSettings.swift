@@ -10,4 +10,10 @@ import AppKit
 
 class PickerSettings: ObservableObject {
     @Published var colorSpace: NSColorSpace = .deviceRGB
+    @Published var displayMode: DisplayMode = .rgb
+    
+    enum DisplayMode: Int {
+        case rgb
+        case hex
+    }
 }

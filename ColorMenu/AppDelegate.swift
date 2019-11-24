@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
         settings.colorSpace = getColorspace()
+        settings.displayMode = getDisplayMode()
         let contentView = ContentView().environmentObject(settings)
         
         if let button = statusItem.button {
@@ -48,6 +49,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for (_, colorSpace) in colorSpaces.sorted(by: { $0.key < $1.key }) {
             let item = NSMenuItem(title: colorSpace.0, action: #selector(clickedColorspace(_:)), keyEquivalent: "")
             item.state = colorSpace.1 == settings.colorSpace ? .on : .off
+            menu.addItem(item)
+        }
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(NSMenuItem(title: "Display Mode", action: nil, keyEquivalent: ""))
+        for displayMode in ["RGB", "Hex"] {
+            let item = NSMenuItem(title: displayMode, action: #selector(clickedDisplayMode(_:)), keyEquivalent: "")
+            if (displayMode == "RGB" && settings.displayMode == .rgb) || (displayMode == "Hex" && settings.displayMode == .hex) {
+                item.state = .on
+            }
             menu.addItem(item)
         }
         menu.addItem(NSMenuItem.separator())
@@ -75,12 +85,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             for (i, item) in menu.items.enumerated() {
                 if item.title == sender.title {
                     setColorspace(i)
-                } else {
+                } else if item.title != "RGB" && item.title != "Hex" {
                     item.state = .off
                 }
             }
         }
-        //self.setColorspace(colorSpace)
+    }
+    
+    func getDisplayMode() -> PickerSettings.DisplayMode {
+        PickerSettings.DisplayMode(rawValue: UserDefaults.standard.integer(forKey: "displayMode")) ?? .rgb
+    }
+    
+    func setDisplayMode(_ mode: PickerSettings.DisplayMode) {
+        UserDefaults.standard.set(mode.rawValue, forKey: "displayMode")
+        settings.displayMode = mode
+    }
+    
+    @objc func clickedDisplayMode(_ sender: NSMenuItem) {
+        setDisplayMode(sender.title == "RGB" ? .rgb : .hex)
+        sender.state = .on
+        if let items = sender.menu?.items {
+            for item in items {
+                if sender.title == item.title {
+                    item.state = .on
+                } else if (sender.title == "RGB" && item.title == "Hex") || (sender.title == "Hex" && item.title == "RGB") {
+                    item.state = .off
+                }
+            }
+        }
     }
 }
-

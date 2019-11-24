@@ -27,29 +27,34 @@ struct ContentView: View {
                 }
             }
             if color != nil {
-                HStack(spacing: 0) {
-                    Text("R:")
-                        .font(.system(size: 13, weight: .heavy))
-                    Text({
-                        let red = "\(Int(255 * color!.redComponent))"
-                        return "\(String(repeating: " ", count: 3 - red.count))\(red)"
-                    }())
-                        .font(.system(size: 13, design: .monospaced))
-                    
-                    Text(" G:")
-                        .font(.system(size: 13, weight: .heavy))
-                    Text({
-                        let green = "\(Int(255 * color!.greenComponent))"
-                        return "\(String(repeating: " ", count: 3 - green.count))\(green)"
-                    }())
-                        .font(.system(size: 13, design: .monospaced))
-                    
-                    Text(" B:")
-                        .font(.system(size: 13, weight: .heavy))
-                    Text({
-                        let blue = "\(Int(255 * color!.blueComponent))"
-                        return "\(String(repeating: " ", count: 3 - blue.count))\(blue)"
-                    }())
+                if settings.displayMode == .rgb {
+                    HStack(spacing: 0) {
+                        Text("R:")
+                            .font(.system(size: 13, weight: .heavy))
+                        Text({
+                            let red = "\(Int(255 * color!.redComponent))"
+                            return "\(String(repeating: " ", count: 3 - red.count))\(red)"
+                        }())
+                            .font(.system(size: 13, design: .monospaced))
+                        
+                        Text(" G:")
+                            .font(.system(size: 13, weight: .heavy))
+                        Text({
+                            let green = "\(Int(255 * color!.greenComponent))"
+                            return "\(String(repeating: " ", count: 3 - green.count))\(green)"
+                        }())
+                            .font(.system(size: 13, design: .monospaced))
+                        
+                        Text(" B:")
+                            .font(.system(size: 13, weight: .heavy))
+                        Text({
+                            let blue = "\(Int(255 * color!.blueComponent))"
+                            return "\(String(repeating: " ", count: 3 - blue.count))\(blue)"
+                        }())
+                            .font(.system(size: 13, design: .monospaced))
+                    }
+                } else {
+                    Text("\(NSString(format: "#%02X%02X%02X", Int(color!.redComponent * 0xFF), Int(color!.greenComponent * 0xFF), Int(color!.blueComponent * 0xFF)))")
                         .font(.system(size: 13, design: .monospaced))
                 }
             }
