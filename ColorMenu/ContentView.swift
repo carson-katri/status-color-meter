@@ -29,7 +29,7 @@ struct ContentView: View {
             if color != nil {
                 HStack(spacing: 0) {
                     Text("R:")
-                        .font(.system(size: 13, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 13, weight: .heavy))
                     Text({
                         let red = "\(Int(255 * color!.redComponent))"
                         return "\(String(repeating: " ", count: 3 - red.count))\(red)"
@@ -37,7 +37,7 @@ struct ContentView: View {
                         .font(.system(size: 13, design: .monospaced))
                     
                     Text(" G:")
-                        .font(.system(size: 13, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 13, weight: .heavy))
                     Text({
                         let green = "\(Int(255 * color!.greenComponent))"
                         return "\(String(repeating: " ", count: 3 - green.count))\(green)"
@@ -45,7 +45,7 @@ struct ContentView: View {
                         .font(.system(size: 13, design: .monospaced))
                     
                     Text(" B:")
-                        .font(.system(size: 13, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 13, weight: .heavy))
                     Text({
                         let blue = "\(Int(255 * color!.blueComponent))"
                         return "\(String(repeating: " ", count: 3 - blue.count))\(blue)"
